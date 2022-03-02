@@ -13,14 +13,14 @@ jobs:
       matrix:
         os: [ubuntu-latest]
     steps:
-      - name: ansible-test
-        uses: ansible-community/ansible-test-gh-action@v1.3.0
-        with:
-          python-version: 3.6
-          target-python-version: 3.6  
-          ansible-core-version: stable-2.11
-          testing-type: sanity
-          test-deps: ansible.netcommon
+#       - name: ansible-test
+#         uses: ansible-community/ansible-test-gh-action@v1.3.0
+#         with:
+#           python-version: 3.6
+#           target-python-version: 3.6  
+#           ansible-core-version: stable-2.11
+#           testing-type: sanity
+#           test-deps: ansible.netcommon
       - name: Perform unit testing with ansible-test
         uses: ansible-community/ansible-test-gh-action@release/v1.3.0
         with:
