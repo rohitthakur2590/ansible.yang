@@ -19,7 +19,7 @@ description:
 options:
   name:
     description:
-      - Name of the yang model to fetched from remote host. This will also fetch all
+      - Name of yang model to fetched from remote host. This will also fetch all
         the dependent yang models and return as part of result. If the value is set
         to I(all) in that case all the yang models supported by remote host will be
         fetched.
