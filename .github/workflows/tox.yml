@@ -20,3 +20,4 @@ jobs:
           target-python-version: 3.6  
           ansible-core-version: stable-2.11
           testing-type: sanity
+          test-deps: ansible.netcommon
