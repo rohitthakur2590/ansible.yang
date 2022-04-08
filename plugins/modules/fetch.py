@@ -19,7 +19,7 @@ description:
 options:
   name:
     description:
-      - Name of the yang model to fetched from remote host. This will also fetch all
+      - Name of yang model to fetched from remote host. This will also fetch all
         the dependent yang models and return as part of result. If the value is set
         to I(all) in that case all the yang models supported by remote host will be
         fetched.
@@ -69,22 +69,22 @@ failed_yang_modules:
 """
 EXAMPLES = """
 - name: Fetch given yang model from remote host
-  community.yang.fetch:
+  ansible.yang.fetch:
     name: "{{ item }}"
   loop:
     - openconfig-interface
     - openconfig-bgp
 
 - name: Fetch list of supported yang model names
-  community.yang.fetch:
+  ansible.yang.fetch:
 
 - name: Fetch all the yang models supported by remote host and store it in dir location
-  community.yang.fetch:
+  ansible.yang.fetch:
     name: all
     dir: "{{ playbook_dir }}/yang_files"
 
 - name: Fetch all the yang models supported by remote host and store it in dir location do not stop on error
-  community.yang.fetch:
+  ansible.yang.fetch:
     name: all
     dir: "{{ playbook_dir }}/yang_files"
     continue_on_failure: true
